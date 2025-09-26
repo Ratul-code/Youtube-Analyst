@@ -1,0 +1,16 @@
+# Ignore Python cache and virtual environments
+__pycache__/
+*.pyc
+venv/
+.env
+
+# macOS system files
+.DS_Store
+
+# IDE config
+.vscode/
+.idea/
+
+# CSV or local data files (optional)
+*.csv
+files/
