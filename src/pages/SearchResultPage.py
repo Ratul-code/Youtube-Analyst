@@ -33,9 +33,20 @@ class SearchResultsPage:
         if not video_list:
             print("⚠️ No videos found. Possibly a loading or network issue.")
             return []
+        final_video_list = []
+        video_count = 0
+        for video in video_list:
+            video_link = video.find_element(By.CSS_SELECTOR, "#video-title").get_attribute("href")
+            if "shorts" not in video_link:
+                final_video_list.append(video)
+                video_count+=1
+            if video_count == count:
+                break
+
+
 
         print(f"✅ Found {len(video_list)} videos.")
-        return video_list[:count]
+        return final_video_list
     
 
     def save_video_info(self, video_list):
