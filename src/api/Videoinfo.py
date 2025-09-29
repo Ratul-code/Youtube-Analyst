@@ -14,7 +14,7 @@ load_dotenv()
 
 
 ssl_context = ssl.create_default_context(cafile=certifi.where())
-url = os.getenv("YOUTUBE_BASE_URL")
+url = os.getenv("YOUTUBE_VIDEO_BASE_URL")
 apikey = os.getenv("YOUTUBE_API_KEY")
 
 
